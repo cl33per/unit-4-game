@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    color: #333333;
+    background-image: url(/assets/images/final_fantasy_x.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.main-arena{
+    background: #333333;    
+    padding:20px;
+    min-height: 750px;
+}
+.second-arena{
+    border: 1px solid #ffae45;
+    height: 500px;  
+}
+/* Character Styling */
+.chars {
+    height: 200px;
+    width: 200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 5px 20px;
+    background-position: center;
+    color: #2774ff;
+    font-weight: 800px;
+    font-size: 18px;
+}
+.chars:hover{
+    opacity: .5;
+}
+
+#yuna {
+    background-image: url(/assets/images/yuna.jpg);
+}
+
+#lulu {
+    background-image: url(/assets/images/lulu.jpg);
+}
+
+#auron {
+    background-image: url(/assets/images/auron.jpg);
+}
+
+#tidus {
+    background-image: url(/assets/images/tidus.jpg);
+}
