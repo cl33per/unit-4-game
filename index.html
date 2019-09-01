@@ -7,9 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="/assets/images/favicon.jpeg">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/game.js"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,15 +32,16 @@
         <div class="row my-3">
             <div id="pickedChar" class="col-lg-6 second-arena">
                 <div class="col-lg-12 attacker">
-                    <h2 class="text-light">Attacker!</h2>
-                   <button id="atckBtn" class="btn btn-outline-danger">Attack</button>
+                    <h2 class="text-light">Attacker! <button id="atckBtn" class="btn btn-outline-danger">Attack</button>
+                    </h2>
                 </div>
+                <h3 id="attackStats" class="text-light"></h3>
             </div>
             <div id="defender" class="col-lg-6 second-arena">
                 <div class="col-lg-12 ">
                     <h2 class="text-light"> Defender! </h2>
                 </div>
-
+                <h3 id="defenderStats" class="text-light"></h3>
             </div>
         </div>
     </div>
@@ -58,6 +56,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+     <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
