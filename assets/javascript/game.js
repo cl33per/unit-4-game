@@ -63,8 +63,7 @@ $(document).ready(function () {
                 $('.chars').addClass('disable');
                 $('#atckBtn').show();
                 console.log('Defender Function Finish Exit');
-            } else if (game.arenaReady) {
-            };
+            } else if (game.arenaReady) {};
             charactersArena();
             testing();
         });
@@ -75,6 +74,7 @@ $(document).ready(function () {
         var attackerArena = $('.attackchar').attr('id');
         var defenderArena = $('.enemy').attr('id');
         // Using switch to asign charater attributes to attacker or defender
+        if (!game.arenaReady){
         switch (attackerArena) {
             case 'yuna':
                 attacker = yuna;
@@ -97,6 +97,7 @@ $(document).ready(function () {
                 console.log('Attacker: lulu');
                 break;
         };
+    };
         switch (defenderArena) {
             case 'yuna':
                 defender = yuna;
@@ -124,6 +125,7 @@ $(document).ready(function () {
         console.log('Defender:' + game.isDefender);
         console.log('Arena Ready:' + game.arenaReady);
         console.log('Defenders Left: ' + defenders);
+        console.log('Attacker AP:' + attacker.ap);
         console.log('-------------------------------')
     }
 
@@ -134,15 +136,19 @@ $(document).ready(function () {
         $('#auron').text(auron.hp);
         $('#lulu').text(lulu.hp);
     };
-        
+
     // Double checks health defender validation wihthin click fucntion
     function win() {
         if (defenders == 0) {
             console.log('Game Win');
             $('#display').empty();
-            $('#display').append()
+            var winText = document.createElement('h2');
+            winText.className = 'text-light';
+            winText.textContent ='You have won the game... Click Resart Game to play again...'
+            $('#display').append(winText);
         };
     };
+
     // Area for attack, hp, counter attack 
     $('#atckBtn').click(function () {
         if (attacker.hp >= 0 && defender.hp >= 0) {
@@ -158,17 +164,28 @@ $(document).ready(function () {
             $('#defenderStats').text(defenderstats);
             console.log('Attacker AP:' + attacker.ap);
             chartacterProperty();
-        } else if(attacker.hp <= 0) {
+        } else if (attacker.hp <= 0) {
             console.log('Attacker Dead');
         };
+        //Game loss
+        if (attacker.hp <= 0) {
+            console.log("Attacker Dead");
+            $('#pickedChar').empty();
+            game.isAttacker = false;
+            game.arenaReady = false;
+            $('#display').empty();
+            var lostText = document.createElement('h2');
+            lostText.className = 'text-light';
+            lostText.textContent ='You have lost the game... Click Resart Game to try again...'
+            $('#display').append(lostText);
+        }
         // Win Round
-        if(defender.hp < 0 && game.isDefender){
+        if (defender.hp <= 0 && game.isDefender) {
             console.log('Defender Dead');
             $('#defender').empty();
             game.isDefender = false;
             game.arenaReady = false;
             defenders--;
-            testing();
         };
         win();
     });
