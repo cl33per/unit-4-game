@@ -16,27 +16,27 @@ $(document).ready(function () {
     // Define Character Properties
     var yuna = {
         name: 'yuna',
-        hp: 380,
-        ap: 4,
+        hp: 400,
+        ap: 15,
         cap: 32,
     };
     var tidus = {
         name: 'tidus',
         hp: 520,
-        ap: 5,
-        cap: 25,
+        ap: 14,
+        cap: 20,
     };
     var auron = {
         name: 'auron',
-        hp: 1030,
-        ap: 10,
+        hp: 630,
+        ap: 16,
         cap: 33,
     };
     var lulu = {
         name: 'lulu',
         hp: 480,
-        ap: 12,
-        cap: 37,
+        ap: 18,
+        cap: 15,
     };
 
     //Selecting Charaters
