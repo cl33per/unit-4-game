@@ -5,7 +5,7 @@ html {
 body {
     min-height: 100%;
     color: #333333;
-    background-image: url(/assets/images/final_fantasy_x.png);
+    background-image: url(../images/final_fantasy_x.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,17 +40,17 @@ body {
 }
 
 #yuna {
-    background-image: url(/assets/images/yuna.jpg);
+    background-image: url(../images/yuna.jpg);
 }
 
 #lulu {
-    background-image: url(/assets/images/lulu.jpg);
+    background-image: url(../images/lulu.jpg);
 }
 
 #auron {
-    background-image: url(/assets/images/auron.jpg);
+    background-image: url(../images/auron.jpg);
 }
 
 #tidus {
-    background-image: url(/assets/images/tidus.jpg);
+    background-image: url(../images/tidus.jpg);
 }
